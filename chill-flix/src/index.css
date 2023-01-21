@@ -15,6 +15,9 @@ select:focus {
   box-shadow: none !important;
 }
 
+.linear-bg {
+  background: linear-gradient(369.83deg, #07091c00 0.17%, #080a1ad6 99.87%);
+}
 .hoveres {
   @apply hidden
 }
