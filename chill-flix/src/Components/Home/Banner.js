@@ -5,8 +5,8 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import { Movies } from '../../Data/MoviesData';
 import FlexMovieItems from '../FlexMovieItems';
 
-function Banner({results}) {
-    //const Movies =results?.results; //serached results
+function Banner() {
+    
   return (
     <div className="relative w-full">
       <Swiper
@@ -35,7 +35,7 @@ function Banner({results}) {
               </div>
               <div className="flex gap-5 items-center">
                 <Link
-                  to={movie.Title}
+                  to={`/watch/${movie?.Title}`}
                   className="bg-subMain hover:text-main transition text-white px-8 py-3 rounded font-medium sm:text-sm text-xs"
                 >
                   Watch

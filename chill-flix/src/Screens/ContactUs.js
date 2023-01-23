@@ -3,6 +3,7 @@ import { TbPhoneCalling } from 'react-icons/tb'
 import { FiMail } from 'react-icons/fi'
 import Head from '../Components/Head'
 import Layout from '../Layout/Layout'
+import contactus from "../assets/images/movies/contactus.jpg"
 
 function ContactUs() {
   const ContactData=[
@@ -25,7 +26,7 @@ function ContactUs() {
   return (
     <Layout>
       <div className='min-height-screen container mx-auto px-2 my-6'>
-        <Head title={"Contact Us"} />
+        <Head title={"Contact Us"} image={contactus} />
         <div className='grid mg:grid-cols-2 gap-6 lg:my-20 mt-10 lg:grid-cols-2 xl:gap-8'>
           {
             ContactData.map((item)=> (

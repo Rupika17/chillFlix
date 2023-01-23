@@ -6,6 +6,7 @@ export const Movies = [
     Year: "1998",
     rate: 5,
     Type: "Thriller",
+    Language: "English"
   },
   {
     Title: "Army of the Dead",
@@ -14,6 +15,7 @@ export const Movies = [
     Year: "2009",
     rate: 4,
     Type: "Horror",
+    Language: "English"
   },
   {
     Title: "Avatar",
@@ -22,6 +24,7 @@ export const Movies = [
     Year: "2009",
     rate: 3.5,
     Type: "Fiction",
+    Language: "English"
   },
   {
     Title: "The Conjuring 2",
@@ -30,6 +33,7 @@ export const Movies = [
     Year: "2014",
     rate: 2.5,
     Type: "Horror",
+    Language: "English"
   },
   {
     Title: "The Lego Batman Movie",
@@ -38,6 +42,7 @@ export const Movies = [
     Year: "2007",
     rate: 2.5,
     Type: "Fiction",
+    Language: "English"
   },
   {
     Title: "The Batman",
@@ -46,6 +51,7 @@ export const Movies = [
     Year: "2004",
     rate: 4.5,
     Type: "Fiction",
+    Language: "English"
   },
   {
     Title: "The Conjuring",
@@ -54,6 +60,7 @@ export const Movies = [
     Year: "2003",
     rate: 4,
     Type: "Horror",
+    Language: "English"
   },
   {
     Title: "Empire of the Sun",
@@ -62,5 +69,6 @@ export const Movies = [
     Year: "1987",
     rate: 2,
     Type: "Horror",
+    Language: "English"
   },
 ];

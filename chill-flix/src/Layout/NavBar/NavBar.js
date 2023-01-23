@@ -3,10 +3,39 @@ import { Link, NavLink } from 'react-router-dom';
 import {BsFillCollectionPlayFill} from 'react-icons/bs'
 import {FaHeart, FaSearch} from 'react-icons/fa'
 import {CgUser} from 'react-icons/cg'
+import { useState } from 'react';
+import axios from 'axios';
 
-function NavBar({handleInput,search,searchButtonClick}) {
+function NavBar() {
     const hover="hover:text-subMain transition text-white"
     const Hover = ({isActive}) => (isActive ? 'text-subMain' : hover);
+    const [searchText, setsearchText] = useState("")
+    const [searchedMovies, setsearchedMovies] = useState({
+      s: "",
+      results: [],
+      selected: {},
+    });
+    const apiurl = "https://www.omdbapi.com/?apikey=63440ab";
+    const search = (e) => {
+      if (e.key === "Enter") {
+        searchButtonClick();
+      }
+    };
+    const searchButtonClick = () => {
+      axios(apiurl + "&s=" + searchedMovies.s).then((data) => {
+        let results = data?.data?.Search;
+        setsearchedMovies((prevState) => {
+          return { ...prevState, results: results };
+        });
+      });
+    };
+    const handleInput = (e) => {
+      let s = e.target.value;
+      setsearchText(s);
+      setsearchedMovies((prevState) => {
+        return { ...prevState, s: s };
+      });
+    };
   return (
     <>
       <div className="bg-main shadow-md sticky top-0 z-20">
@@ -23,6 +52,7 @@ function NavBar({handleInput,search,searchButtonClick}) {
           {/* Search Form, */}
           <div className="col-span-3">
             <div className="w-full text-sm bg-dryGray rounded flex-btn gap-4">
+              <Link  to={`/search/${searchText}`}>
               <button
                 type="submit"
                 className="bg-subMain w-12 flex-colo h-12 rounded text-white"
@@ -30,6 +60,7 @@ function NavBar({handleInput,search,searchButtonClick}) {
               >
                 <FaSearch />
               </button>
+              </Link>
               <input
                 type="text"
                 placeholder="Search Movie"
