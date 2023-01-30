@@ -22,7 +22,7 @@ function SearchedResults() {
       setmovieList(results);
     });
     return () => (mounted = false);
-  }, []);
+  }, [id]);
   const Title = movieList?.length > 0 ? "Searched Results" : "No Results Found";
   return (
     <Layout>

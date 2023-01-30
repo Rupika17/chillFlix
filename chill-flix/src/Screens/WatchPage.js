@@ -9,7 +9,7 @@ import { FaCloudDownloadAlt, FaHeart } from "react-icons/fa";
 function WatchPage() {
   let { id } = useParams();
   const movie = Movies.find((movie) => movie.Title === id);
-  const [play, setPlay] = useState(false);
+ 
   return (
     <Layout>
       <div className="container mx-auto bg-dry p-6 mb-12">

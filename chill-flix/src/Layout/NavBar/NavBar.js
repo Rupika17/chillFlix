@@ -15,20 +15,20 @@ function NavBar() {
       results: [],
       selected: {},
     });
-    const apiurl = "https://www.omdbapi.com/?apikey=63440ab";
-    const search = (e) => {
-      if (e.key === "Enter") {
-        searchButtonClick();
-      }
-    };
-    const searchButtonClick = () => {
-      axios(apiurl + "&s=" + searchedMovies.s).then((data) => {
-        let results = data?.data?.Search;
-        setsearchedMovies((prevState) => {
-          return { ...prevState, results: results };
-        });
-      });
-    };
+    // const apiurl = "https://www.omdbapi.com/?apikey=63440ab";
+    // const search = (e) => {
+    //   if (e.key === "Enter") {
+    //     searchButtonClick();
+    //   }
+    // };
+    // const searchButtonClick = () => {
+    //   axios(apiurl + "&s=" + searchedMovies.s).then((data) => {
+    //     let results = data?.data?.Search;
+    //     setsearchedMovies((prevState) => {
+    //       return { ...prevState, results: results };
+    //     });
+    //   });
+    // };
     const handleInput = (e) => {
       let s = e.target.value;
       setsearchText(s);
@@ -56,7 +56,7 @@ function NavBar() {
               <button
                 type="submit"
                 className="bg-subMain w-12 flex-colo h-12 rounded text-white"
-                onClick={searchButtonClick}
+                //onClick={searchButtonClick}
               >
                 <FaSearch />
               </button>
@@ -66,7 +66,7 @@ function NavBar() {
                 placeholder="Search Movie"
                 className="font-medium placeholder:text-border text-sm w-11/12 h-12 bg-transparent border-none px-2 text-black"
                 onChange={handleInput}
-                onKeyDown={search}
+                //onKeyDown={search}
               />
             </div>
           </div>
