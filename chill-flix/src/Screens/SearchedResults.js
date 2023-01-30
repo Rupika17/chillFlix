@@ -1,11 +1,8 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import { Movies } from "../Data/MoviesData";
 import Layout from "../Layout/Layout";
 import { AiOutlineFileSearch } from "react-icons/ai";
 import Titles from "../Components/Titles";
-import act1 from "../assets/images/movies/actors/1.jpg";
-import act2 from "../assets/images/movies/actors/2.jpg";
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";

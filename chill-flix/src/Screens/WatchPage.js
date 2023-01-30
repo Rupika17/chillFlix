@@ -2,7 +2,6 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import { Movies } from "../Data/MoviesData";
-import { useState } from "react";
 import { BiArrowBack } from "react-icons/bi";
 import { FaCloudDownloadAlt, FaHeart } from "react-icons/fa";
 

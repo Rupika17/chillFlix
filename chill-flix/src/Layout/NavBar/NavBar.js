@@ -4,37 +4,15 @@ import {BsFillCollectionPlayFill} from 'react-icons/bs'
 import {FaHeart, FaSearch} from 'react-icons/fa'
 import {CgUser} from 'react-icons/cg'
 import { useState } from 'react';
-import axios from 'axios';
 
 function NavBar() {
     const hover="hover:text-subMain transition text-white"
     const Hover = ({isActive}) => (isActive ? 'text-subMain' : hover);
     const [searchText, setsearchText] = useState("")
-    const [searchedMovies, setsearchedMovies] = useState({
-      s: "",
-      results: [],
-      selected: {},
-    });
-    // const apiurl = "https://www.omdbapi.com/?apikey=63440ab";
-    // const search = (e) => {
-    //   if (e.key === "Enter") {
-    //     searchButtonClick();
-    //   }
-    // };
-    // const searchButtonClick = () => {
-    //   axios(apiurl + "&s=" + searchedMovies.s).then((data) => {
-    //     let results = data?.data?.Search;
-    //     setsearchedMovies((prevState) => {
-    //       return { ...prevState, results: results };
-    //     });
-    //   });
-    // };
+   
     const handleInput = (e) => {
       let s = e.target.value;
       setsearchText(s);
-      setsearchedMovies((prevState) => {
-        return { ...prevState, s: s };
-      });
     };
   return (
     <>
