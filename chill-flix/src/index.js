@@ -8,8 +8,9 @@ import "swiper/css/navigation";
 import "aos";
 import "aos/dist/aos.css";
 import { BrowserRouter } from "react-router-dom";
+import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.hydrate(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -17,3 +18,4 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+reportWebVitals();
